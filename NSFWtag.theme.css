@@ -1,0 +1,62 @@
+/**
+* @name NSFWtag
+* @author ryan.0324, krystalskullofficial
+* @description A tag for 'NSFW' channels so they are easier to see/notice. Also recolors the small triangle too be red,
+* @version 5.1.0
+* @authorId 929208515883569182
+* @website https://krstlskll69.github.io/
+* @source https://github.com/KrstlSkll69/vc-snippets?tab=readme-ov-file#1st-nsfw-channel-tag-
+*/
+
+/*--- Channel list 'NSFW' Label ---*/
+[class*=linkTop_]:has([class*=iconContainer_] [d^="M18.09 1.63"]) > [class*=children_]::after {
+    content: "NSFW"; 
+    background: var(--status-danger-background);
+    color: var(--status-danger-text);
+    padding: 0 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 16px;
+    margin-left: 4px;
+}
+
+/*--- Channel list Icon Recolor ---*/
+.icon_d8bfb3:has(path[d^="M18.09 1.63"]) path[d^="M18.09 1.63"] {
+    fill: var(--status-danger-background) !important;
+    border: 1px solid rebeccapurple !important;
+  }
+
+/*--------------*/
+
+/*--- 'NSFW' Chat Label ---*/
+[class*=iconWrapper_]:has([d^="M18.09 1.63"]) ~ [class*=titleWrapper_] h1::after {
+    content: "NSFW";
+    background: var(--status-danger-background);
+    color: var(--status-danger-text);
+    padding: 0 6px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .02em;
+    line-height: 16px;
+    margin-left: 7px;
+}
+
+/*--- Chat Icon Recolor ---*/
+[class^=icon__] path[d^="M18.09 1.63"] {
+  fill: var(--status-danger-background) !important;
+}
+
+/*-------------*/ 
+
+/*--- 'NSFW' Message Bar Icon Recolor ---*/
+[class^=icon__] path[d^="M18.09 1.63"] {
+  fill: var(--status-danger-background) !important;
+}
+
+/*--- Ping Warning ---*/
+.ping_c02c63 path[d^="M18.09 14.63c.4-.7"] {
+  fill: var(--status-danger-background) !important;
+}
